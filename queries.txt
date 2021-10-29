@@ -19,9 +19,11 @@ was retained or not; use 1/0 so mathematical sums can be performed on the flag c
     SELECT
         player_id,
         joined,
-        CASE WHEN diff_last_vs_joined > 30 THEN 1
-          -- if diff > 30 then 1/TRUE ie retained
-            ELSE 0 -- ELSE 0/FALSE ie not retained
+        CASE
+            WHEN diff_last_vs_joined > 30 THEN 1
+              -- if diff > 30 then 1/TRUE ie retained
+            ELSE 0
+              -- ELSE 0/FALSE ie not retained
             END
             AS retained_flag
     FROM
@@ -34,10 +36,10 @@ the number of days between their most recent match and the day they joined
             player_info.player_id AS player_id,
             player_info.joined AS joined,
             IFNULL (MAX (matches_info.day), player_info.joined) AS last_match_day,
-              -- day index of most recent match, IFNULL sets last match day =
+              -- day index of most recent match; IFNULL sets last match day =
               -- joined where no matches played
             (MAX (matches_info.day) - player_info.joined) AS diff_last_vs_joined,
-              -- days between most recent match and joining,
+              -- days between most recent match and joining;
               -- prior IFNULL sets no matches played diff = 0
         FROM `thematic-scope-329421.game_co_data.player_info` AS player_info
         LEFT JOIN `thematic-scope-329421.game_co_data.matches_info` AS matches_info
