@@ -1,3 +1,4 @@
+```sql
 /*
 create a table to calculate the 30-day retention for each day in the year
 */
@@ -55,9 +56,9 @@ and make the results ready for export to a visualization tool
 */
 GROUP BY day_joined -- aggregation to one record for each day
 ORDER BY day_joined ASC -- put it in date order
-
+```
 ------------------
-
+```sql
 /*
 create a table to analyze the relationship between win-loss record and 30-day retention
 
@@ -169,3 +170,4 @@ and make the results ready for export to a visualization tool
 */
 GROUP BY win_pct_range -- aggregation to one record for each pct range
 ORDER BY win_pct_range ASC -- put it in range order
+```

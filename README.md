@@ -19,4 +19,8 @@ From this chart we can see that players who either won or lost nearly all of the
 
 If our assumptions are correct then we may be able to increase retention by engineering the game so that we track players' win-loss records and provide those with poor records with opponents who are easier to beat, and those with excellent records with opponents who are harder to beat. We could attempt to do this in two ways: match players with actual players who appear to be close to their own skill level, or create "dumb-bots" and "smart-bots" and deploy them to play some of the matches against players in our target groups. The use of bots would have the additional advantage of not inadvertently affecting the win-loss record of other players in an attempt to influence the records of our target groups. The bots could be relied on not to quit, no matter how often they won or lost!
 
-[(You can view our SQL code here.)](https://github.com/KellySpencerTO/SQL_Project_1/blob/main/queries.txt)
+[You can view our SQL code here.](https://github.com/KellySpencerTO/SQL_Project_1/blob/main/queries.md)
+
+[You can view our table for 30-day retention here.](https://docs.google.com/spreadsheets/d/1Dm69-vBBQL9hb2oH9sSDf_1s-0dof3c44qhVc_ZL2dM/edit?usp=sharing)
+
+[You can view our table for winning percentage vs retention here.](https://docs.google.com/spreadsheets/d/1ws92aN1NKB2v0mcjKx3KvQE3ya2fdR3bHN2OLaMePGw/edit?usp=sharing)
